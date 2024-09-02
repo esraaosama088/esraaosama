@@ -1,0 +1,17 @@
+{% extends 'todo_app/base.html' %}
+
+{% block content %}
+<h2>Categories</h2>
+<ul>
+    {% for category in categories %}
+        <li><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
+    {% endfor %}
+</ul>
+
+<h2>Tasks</h2>
+<ul>
+    {% for task in tasks %}
+        <li><a href="{{ task.get_absolute_url }}">{{ task.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

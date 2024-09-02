@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ todo.name }}</title>
+</head>
+<body>
+    <h1>{{ todo.name }}</h1>
+    <p>{{ todo.description }}</p>
+    <p>Deadline: {{ todo.deadline }}</p>
+    <p>Category: {{ todo.category.name }}</p>
+    <p>Status: {{ todo.get_status_display }}</p>
+    <a href="{% url 'index' %}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ category.name }} Todos</title>
+</head>
+<body>
+    <h1>Todos in {{ category.name }}</h1>
+    <ul>
+        {% for todo in todos %}
+            <li><a href="{% url 'todo_detail' todo.id %}">{{ todo.name }}</a> - {{ todo.get_status_display }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Back to Home</a>
+</body>
+</html>

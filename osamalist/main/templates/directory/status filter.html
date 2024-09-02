@@ -1,0 +1,10 @@
+{% extends 'todo_app/base.html' %}
+
+{% block content %}
+<h2>Tasks with status: {{ tasks.0.status }}</h2>
+<ul>
+    {% for task in tasks %}
+        <li><a href="{{ task.get_absolute_url }}">{{ task.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
